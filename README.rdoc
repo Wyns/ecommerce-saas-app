@@ -1,6 +1,5 @@
-== README
+== Practice Project - SaaS Web Application
 
-Practice Project Application
 Subscription-based web application utilizing ecommerce and software as a service models.
 
 Things you may want to cover:
