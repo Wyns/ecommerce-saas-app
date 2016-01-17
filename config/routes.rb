@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #Routes for contact form
+  resources :contacts
+  
   #About Page
   get '/about' => 'pages#about'
   
