@@ -4,7 +4,7 @@
 @import "font-awesome";
 
 .navbar {
-  background: #d7d2cc
+  background: #d7d2cc;
 }
 
 .jumbotron {
@@ -15,16 +15,13 @@
   color: white;    
 }
 
-.well {
-  background: #96DEDA
-}
-
 .well-link a {
   color: #40827E;
 }
 
 .well-link a:hover {
   color: white;
+  text-decoration: none;
 }
 
 .form-header {
@@ -40,6 +37,10 @@
   color: #777777;
 }
 
+.teal-text {
+  color: #40827E;
+}
+
 .btn-info {
   background: #50C9C3;
   border-color: #50C9C3;
@@ -48,4 +49,12 @@
 .btn-info:hover {
   background: #96DEDA;
   border-color: #96DEDA;
+}
+
+.aqua-bkgd {
+  background: #96DEDA;
+}
+
+.gray-bkgd {
+  background: #d7d2cc;
 }
