@@ -1,0 +1,45 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  
+  <br /><h4 class="gray-text"><em>Account Setup</em></h4>
+
+  <div class="field form-group">
+    <%= f.label :email, class: 'gray-text' %><br />
+    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :password, class: 'gray-text' %>
+    <% if @validatable %>
+    <em class="gray-text">(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :password_confirmation, class: 'gray-text' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+  </div>
+  
+  <br /><h4 class="gray-text"><em>Monthly Payment Setup</em></h4>
+  
+  <div class="field form-group">
+    <%= label_tag :card_number, "Credit Card Number", class: 'gray-text' %>
+    <%= text_field_tag :card_number, nil, name: nil, class: "form-control" %>
+  </div>
+  
+  <div class="field form-group">
+    <%= label_tag :card_code, "Security Code on Card (CVV)", class: 'gray-text' %>
+    <%= text_field_tag :card_code, nil, name: nil, class: "form-control" %>
+  </div>
+  
+  <div class="field form-group">
+    <%= label_tag :card_month, "Card Expiration", class: 'gray-text' %>
+    <span class=""><%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %></span>
+    <span><%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %></span>
+  </div><br />
+
+  <div class="actions form-group">
+    <%= f.submit "Create Account", class: 'btn btn-default' %>
+  </div>
+<% end %>
