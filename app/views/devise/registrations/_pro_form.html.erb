@@ -1,7 +1,9 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'pro_form'}) do |f| %>
   <%= devise_error_messages! %>
   
   <br /><h4 class="gray-text"><em>Account Setup</em></h4>
+  
+  <%= hidden_field_tag 'plan', params[:plan] %>
 
   <div class="field form-group">
     <%= f.label :email, class: 'gray-text' %><br />
@@ -40,6 +42,6 @@
   </div><br />
 
   <div class="actions form-group">
-    <%= f.submit "Create Account", class: 'btn btn-default' %>
+    <%= f.submit "Create Account", class: 'btn btn-default', id: 'pro-form-submit-btn' %>
   </div>
 <% end %>
