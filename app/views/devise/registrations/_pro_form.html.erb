@@ -36,8 +36,8 @@
   
   <div class="field form-group">
     <%= label_tag :card_month, "Card Expiration", class: 'gray-text' %>
-    <span class=""><%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %></span>
-    <span><%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %></span>
+    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month", class: "menulist-custom"} %>
+    <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year", class: "menulist-custom"} %>
   </div><br />
 
   <div class="actions form-group">
