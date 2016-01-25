@@ -45,6 +45,8 @@
       <%= content_tag :div, value, class: "alert alert-#{key}" %>
     <% end %>
     
+    <%= devise_error_messages! %>
+    
     <%= yield %>
   </div>
 
