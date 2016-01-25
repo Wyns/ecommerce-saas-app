@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   #Devise routes for users
   devise_for :users, controllers: { registrations: 'users/registrations' }
+  #Nested routes for user profiles
+  resources :users do
+    resource :profile
+  end
   #Routes for contact form
   resources :contacts
   #About Page
