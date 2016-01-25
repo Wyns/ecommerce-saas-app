@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #Devise routes for users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   #Routes for contact form
   resources :contacts
-  
   #About Page
   get '/about' => 'pages#about'
-  
   #Home Page
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
