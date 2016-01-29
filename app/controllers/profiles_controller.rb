@@ -3,8 +3,24 @@ class ProfilesController < ApplicationController
   def new
     # form where a user can fill out their own profile.
     @user = User.find( params[:user_id] )
-    @variable = params[:hello]
     @profile = @user.build_profile
   end
+  
+  def create 
+    @user = User.find( params[:user_id] )
+    @profile = @user.build_profile(profile_params)
+    if @profile.save
+      flash[:success] = "Profile created!"
+      redirect_to user_path( params[:user_id] )
+    else
+      flash[:danger] = 'Sorry, your profile has not been created. Please make sure you are completing all required fields.'
+      render action: :new
+    end
+  end
+  
+  private
+    def profile_params
+      params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
+    end
   
 end
