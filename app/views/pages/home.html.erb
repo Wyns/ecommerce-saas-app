@@ -21,9 +21,9 @@
         <h2 class="text-center teal-text">The Community</h2>
         <h4 class="gray-text">Visit the community to meet other developers, entrepreneurs, and investors.</h4>
         <% if current_user.profile %>
-          <%= link_to "Visit the Community", "#", class: 'btn btn-info btn-lg btn-block' %>
+          <%= link_to "Visit the Community", users_path, class: 'btn btn-info btn-lg btn-block' %>
         <% else %>
-          <%= link_to "Visit the Community", "#", class: 'btn btn-default btn-lg btn-block' %>
+          <%= link_to "Visit the Community", users_path, class: 'btn btn-default btn-lg btn-block' %>
         <% end %>
       </div>
     </div>
