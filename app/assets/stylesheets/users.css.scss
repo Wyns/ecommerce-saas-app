@@ -1,0 +1,35 @@
+.profile-img {
+  border-radius: 20px;
+}
+
+.profile-name {
+  margin-top: 100px;
+  margin-bottom: 5px;
+}
+
+.job-title-cntnr {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.job-title-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #777777;
+  border-radius: 20px;
+  background-color: #777777;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24px;
+  // font-size: 23px;
+}
+
+.job-title {
+  vertical-align: middle;
+}
+
+.profile-padding {
+  padding-left: 20px;
+}

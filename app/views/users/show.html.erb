@@ -1,8 +1,27 @@
-<%= image_tag @user.profile.avatar.url(:square) %><br />
-<%= @user.profile.first_name %> <%= @user.profile.last_name %><br />
-<%= @user.profile.job_title %><br />
-<% if current_user.plan_id == 2 %>
-  <%= @user.profile.phone_number %><br />
-  <%= @user.profile.contact_email %><br />
-<% end %>
-<%= @user.profile.description %><br />
+<div class="row">
+  <div class="col-md-3 col-md-offset-2 text-center">
+    <%= image_tag @user.profile.avatar.url(:square), class: 'profile-img' %><br />
+  </div>
+  <div class="col-md-7">
+    <h1 class="profile-name teal-text"><strong><%= @user.profile.first_name %> <%= @user.profile.last_name %></strong></h1>
+    <h3 class="job-title-cntnr gray-text"><span class="job-title-icon"><%= job_title_icon %></span> <em class="job-title"><%= @user.profile.job_title %></em></h3>
+  </div>
+</div>
+<div class="row">
+  <br />
+  <div class="col-md-3 col-md-offset-2 text-center profile-padding teal-text">
+    <% if current_user.plan_id == 2 %>
+        <i class="fa fa-phone fa-fw"></i> <%= @user.profile.phone_number %><br />
+        <i class="fa fa-envelope-o fa-fw"></i> <%= @user.profile.contact_email %><br /><br />
+    <% end %>
+  </div>
+  <div class="col-md-7"></div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 profile-padding gray-text">
+    <div class="well">
+      <%= @user.profile.description %><br />
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+</div>
