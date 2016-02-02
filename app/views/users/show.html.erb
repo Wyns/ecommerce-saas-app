@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-7">
     <h1 class="profile-name teal-text"><strong><%= @user.profile.first_name %> <%= @user.profile.last_name %></strong></h1>
-    <h3 class="job-title-cntnr gray-text"><span class="job-title-icon"><%= job_title_icon %></span> <em class="job-title"><%= @user.profile.job_title %></em></h3>
+    <h3 class="show-job-title gray-text"><span class="job-title-icon"><%= job_title_icon %></span> <em class="job-title"><%= @user.profile.job_title %></em></h3>
   </div>
 </div>
 <div class="row">
@@ -12,10 +12,9 @@
   <div class="col-md-3 col-md-offset-2 text-center profile-padding teal-text">
     <% if current_user.plan_id == 2 %>
         <i class="fa fa-phone fa-fw"></i> <%= @user.profile.phone_number %><br />
-        <i class="fa fa-envelope-o fa-fw"></i> <%= @user.profile.contact_email %><br /><br />
+        <i class="fa fa-envelope-o fa-fw"></i> <%= mail_to(@user.profile.contact_email, name = nil, html_options = {class: 'show-email'}) %><br /><br />
     <% end %>
   </div>
-  <div class="col-md-7"></div>
 </div>
 <div class="row">
   <div class="col-md-8 col-md-offset-2 profile-padding gray-text">
@@ -23,5 +22,9 @@
       <%= @user.profile.description %><br />
     </div>
   </div>
-  <div class="col-md-2"></div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 profile-padding">
+    <%= link_to "Back", :back, class: 'back-link' %>
+  </div>
 </div>

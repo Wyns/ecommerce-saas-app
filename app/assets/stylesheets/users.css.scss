@@ -8,7 +8,7 @@
   margin-bottom: 5px;
 }
 
-.job-title-cntnr {
+.show-job-title {
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -35,9 +35,37 @@
   padding-left: 20px;
 }
 
+a.show-email {
+  color: #40827E;
+}
+
+a.show-email:hover {
+  color: #777777;
+}
+
+a.back-link {
+  color: #777777;
+}
+
+a.back-link:hover {
+  color: #777777;
+}
+
 // Users Index Page Styles
 .profile-index-img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+}
+
+.index-name {
+  display: inline-block;
+}
+
+.index-badge {
+  vertical-align: super;
+}
+
+.index-job-title {
+  margin-top: 0px;
 }
