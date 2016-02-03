@@ -51,7 +51,7 @@ gem 'figaro', '1.0.0'
 gem 'paperclip', '4.2.1'
 
 # Use amazon sw3 for image storage
-gem 'aws-sdk', '2.2.14'
+gem 'aws-sdk-v1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '3.1.7'
