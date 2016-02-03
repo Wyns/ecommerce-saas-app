@@ -80,4 +80,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  # Mailer setting for heroku
+  config.action_mailer.default_url_options = { :host => 'intense-island-5820.heroku.com' }
 end
