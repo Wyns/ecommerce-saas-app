@@ -15,6 +15,8 @@ end
 gem 'sass-rails', '4.0.3'
 # Use bootstrap library for styles
 gem 'bootstrap-sass', '3.3.1'
+# Use autoprefixer to add vendor prefixes to CSS
+gem 'autoprefixer-rails', '6.3.1'
 # Use font awesome library for icons
 gem 'font-awesome-sass', '4.2.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,6 +49,9 @@ gem 'figaro', '1.0.0'
 
 # Use paperclip for image uploads
 gem 'paperclip', '4.2.1'
+
+# Use amazon sw3 for image storage
+gem 'aws-sdk', '2.2.14'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '3.1.7'
