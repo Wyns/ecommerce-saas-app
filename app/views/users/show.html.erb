@@ -11,8 +11,12 @@
   <br />
   <div class="col-md-3 col-md-offset-2 text-center profile-padding teal-text">
     <% if current_user.plan_id == 2 %>
+      <% if @user.profile.phone_number == "" || nil %>
+        <i class="fa fa-envelope-o fa-fw"></i> <%= mail_to(@user.profile.contact_email, name = nil, html_options = {class: 'show-email'}) %><br /><br />
+      <% else %>
         <i class="fa fa-phone fa-fw"></i> <%= @user.profile.phone_number %><br />
         <i class="fa fa-envelope-o fa-fw"></i> <%= mail_to(@user.profile.contact_email, name = nil, html_options = {class: 'show-email'}) %><br /><br />
+      <% end %>
     <% end %>
   </div>
 </div>

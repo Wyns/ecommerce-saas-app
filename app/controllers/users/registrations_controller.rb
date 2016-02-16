@@ -12,6 +12,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
           resource.save
         end
       end
+      
+      # unless resource = Stripe::Customer.retrieve(resource.stripe_customer_token) rescue nil
+      #   # Logic
+      # end
     end
   end
   
