@@ -1,27 +1,30 @@
-== Practice Project - SaaS Web Application
+== Practice Project - <i>Ecommerce SaaS Web Application</i>
 
 Subscription-based web application utilizing ecommerce and software as a service models.
 
-Things you may want to cover:
+=== About My App:
+I created a two plan, membership-based social networking app that has a free basic plan that does not show profile contact information and a paid monthly subscription pro plan that allows the user full access to all profiles, including all contact information.
 
-* Ruby version
+These are the features that I included in my app:
 
-* System dependencies
+* Devise handles user authentication and provides the user with a login account that can be added/edited/deleted. 
 
-* Configuration
+* Users, profiles and plans are linked through a relational database declared with ActiveRecord associations. Plans have a one to many relationship with users, set up at registration. Users have a one to one relationship with profiles, once their profile is created after login. Profiles can be added/edited/deleted.
 
-* Database creation
+* Used Stripe to handle payment processing for paid subscription pro plan 
 
-* Database initialization
+* Used Paperclip to include profile image
 
-* How to run the test suite
+* Added medium, square and thumb sized missing.png images as generic default profile image
 
-* Services (job queues, cache servers, search engines, etc.)
+* Used AWS S3 to host images so that image files are not stored directly in the database
 
-* Deployment instructions
+* Set up Sendgrid mailer for password reset and contact form delivery
 
-* ...
+* Integrated Bootstrap for front end framework and better error handling communication
 
+* Employed Gitflow Workflow method which incorporates feature branch workflow to mimic a continuous integration environment
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Built app on Cloud9 IDE to familiarize myself with cloud-based remote development
+
+* Deployed to heroku https://intense-island-5820.herokuapp.com/
